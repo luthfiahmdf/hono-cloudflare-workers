@@ -10,7 +10,7 @@ const routes = new OpenAPIHono()
     openapi: "3.0.3",
     info: {
       version: "1.0.0",
-      title: "My API",
+      title: "Pathatu API",
     },
   });
 export type AppType = typeof routes;
