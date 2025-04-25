@@ -2,10 +2,8 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "hono-cloudflare-workers",
   "main": "src/index.ts",
-  "compatibility_date": "2025-04-25"
-  // "compatibility_flags": [
-  //   "nodejs_compat"
-  // ],
+  "compatibility_date": "2025-04-25",
+  "compatibility_flags": ["nodejs_compat"],
   // "vars": {
   //   "MY_VAR": "my-variable"
   // },
@@ -21,13 +19,14 @@
   //     "bucket_name": "my-bucket"
   //   }
   // ],
-  // "d1_databases": [
-  //   {
-  //     "binding": "MY_DB",
-  //     "database_name": "my-database",
-  //     "database_id": ""
-  //   }
-  // ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "hono-pathatu-cfw",
+      "database_id": "e9ae9b7b-a94f-4e07-8487-b54031f43584",
+      "migrations_dir": "drizzle"
+    }
+  ]
   // "ai": {
   //   "binding": "AI"
   // },
