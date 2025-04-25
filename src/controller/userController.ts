@@ -1,5 +1,5 @@
 import { OpenAPIHono } from "@hono/zod-openapi";
-import { Context } from "../type/type";
+import { Context } from "../types/type";
 import { createUserRoute } from "../routes/userRoute";
 import { drizzle } from "drizzle-orm/d1";
 import { users } from "../db/schema";

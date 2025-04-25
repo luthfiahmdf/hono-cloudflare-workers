@@ -4,9 +4,9 @@
   "main": "src/index.ts",
   "compatibility_date": "2025-04-25",
   "compatibility_flags": ["nodejs_compat"],
-  "vars": {
-    "JWT_SECRET": "rahasia-gusy"
-  },
+  // "vars": {
+  //   "MY_VAR": "my-variable"
+  // },
   // "kv_namespaces": [
   //   {
   //     "binding": "MY_KV_NAMESPACE",
@@ -22,8 +22,8 @@
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "hono-pathatu-cfw",
-      "database_id": "e9ae9b7b-a94f-4e07-8487-b54031f43584",
+      "database_name": "DATABASE_NAME",
+      "database_id": "DATABASE_ID",
       "migrations_dir": "drizzle"
     }
   ]
