@@ -4,8 +4,8 @@ import * as schema from "../db/schema";
 type DrizzleDB = DrizzleD1Database<typeof schema>;
 
 export type Context = {
-  Binding: {
-    DB: DrizzleDB;
+  Bindings: {
+    DB: D1Database;
   };
   Variables: {
     db: DrizzleDB;

@@ -1,7 +1,7 @@
 import { relations, sql } from "drizzle-orm";
 import { sqliteTable, text } from "drizzle-orm/sqlite-core";
 import { v7 as uuidv7 } from "uuid";
-const users = sqliteTable("users_table", {
+export const users = sqliteTable("users_table", {
   id: text("id")
     .primaryKey()
     .$defaultFn(() => uuidv7()),
