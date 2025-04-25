@@ -1,9 +1,11 @@
 import { OpenAPIHono } from "@hono/zod-openapi";
 import { userController } from "../controller/userController";
+import { userLoginController } from "../controller/authController";
 
 const routes = new OpenAPIHono()
   .basePath("/api")
   .route("/users", userController)
+  .route("/auth", userLoginController)
   .doc("/doc", {
     openapi: "3.0.3",
     info: {

@@ -10,6 +10,7 @@ import routes from "./routes/route";
 
 export type Env = {
   DB: D1Database;
+  JWT_SECRET: string;
 };
 const app = new Hono<{ Bindings: Env }>({
   router: new SmartRouter({ routers: [new RegExpRouter(), new TrieRouter()] }),
@@ -18,7 +19,8 @@ const app = new Hono<{ Bindings: Env }>({
   .use(prettyJSON())
   .use("api/", cors())
   .route("", routes)
-  .get("/ui", Scalar({ url: "/api/doc", theme: "elysiajs" }));
+  .get("/ui", Scalar({ url: "/api/doc", theme: "elysiajs" }))
+  .get("/", (c) => c.text(`${c.env.JWT_SECRET}`));
 
 // app.get("/", (c) => {
 //   return c.text("Hello Hono!");
