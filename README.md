@@ -1,4 +1,4 @@
-# 🚀 Hono React + Cloudflare Workers + Drizzle ORM Template
+# 🚀 Hono + Cloudflare Workers + Drizzle ORM Template
 
 This project is a starter template built with **[Hono](https://hono.dev/)** — a lightweight, fast web framework for Cloudflare Workers. It includes **Drizzle ORM** for managing your D1 database, **Zod + OpenAPI** for schema validation and API documentation, and **bcryptjs** for secure password hashing compatible with Cloudflare.
 
