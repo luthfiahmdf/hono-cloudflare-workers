@@ -1,6 +1,7 @@
 import { createRoute } from "@hono/zod-openapi";
 import { jsonContent, jsonContentRequired } from "stoker/openapi/helpers";
 import { usersSchema } from "../schemas/user";
+import { errorSchema } from "../schemas/globalSchema";
 
 const createUserRoute = createRoute({
   method: "post",
@@ -10,6 +11,7 @@ const createUserRoute = createRoute({
   },
   responses: {
     200: jsonContent(usersSchema, "User created"),
+    400: jsonContent(errorSchema, "Bad request"),
   },
 });
 

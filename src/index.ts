@@ -20,10 +20,6 @@ const app = new Hono<{ Bindings: Env }>({
   .use("api/", cors())
   .route("", routes)
   .get("/ui", Scalar({ url: "/api/doc", theme: "elysiajs" }))
-  .get("/", (c) => c.text(`${c.env.JWT_SECRET}`));
-
-// app.get("/", (c) => {
-//   return c.text("Hello Hono!");
-// });
+  .get("/", (c) => c.text(`Hello Hono!🔥 `));
 
 export default app;
